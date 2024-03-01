@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover effect</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: #170312;
+            background: #0f0105;
+            display: flex;
+            gap: 2vw;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .containers {
+            width: 25vw;
+            height: 70vh;
+            position: relative;
+            transition: all 0.4s;
+        }
+
+        .containers img:nth-child(1) {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.4s;
+            border-radius: 10px;
+            /* filter: drop-shadow(6px 10px 7px #240000); */
+            filter: drop-shadow(6px 10px 7px #3b00328a);
+        }
+
+        .containers img:nth-child(2) {
+            width: 100%;
+            position: absolute;
+            bottom: -10%;
+            left: 8%;
+            opacity: 0;
+            transition: all 0.4s;
+        }
+
+        .containers:hover img:nth-child(1) {
+            transform: perspective(450px) rotateX(15deg) translateY(-5%) translateZ(0);
+            filter: blur(4px) grayscale(6);
+        }
+
+        .containers:hover img:nth-child(2) {
+            opacity: 1;
+            bottom: 0;
+            filter: drop-shadow(0 0 10px red);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containers" id="container1">
+        <img src="images/ironman1.jpg" alt="">
+        <img src="images/ironman-1043700_1920-removebg-preview.png" alt="">
+    </div>
+    <!-- <div class="containers" id="container2"></div> -->
+</body>
+
+</html>

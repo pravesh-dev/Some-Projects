@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step Progress Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="container">
+        <div id="back-bar"></div>
+        <div id="front-bar"></div>
+        <div id="steps-container">
+            <div class="step-box">
+                <div class="steps completed-steps"><i class="ri-check-line"></i></div>
+                <p class="step-count checked">Start</p>
+            </div>
+            <div class="step-box">
+                <div class="steps"><i class="ri-close-fill"></i></div>
+                <p class="step-count">Step 2</p>
+            </div>
+            <div class="step-box">
+                <div class="steps"><i class="ri-close-fill"></i></div>
+                <p class="step-count">Step 3</p>
+            </div>
+            <div class="step-box">
+                <div class="steps"><i class="ri-close-fill"></i></div>
+                <p class="step-count">Step 4</p>
+            </div>
+            <div class="step-box">
+                <div class="steps"><i class="ri-close-fill"></i></div>
+                <p class="step-count">Final</p>
+            </div>
+        </div>
+        <div id="btns-container">
+            <button id="previous-btn" class="btns"><i class="ri-arrow-left-line"></i></button>
+            <button id="next-btn" class="btns"><i class="ri-arrow-right-line"></i></button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -2,7 +2,6 @@ let bar = document.querySelector("#front-bar");
 const nextBtn = document.querySelector("#next-btn");
 const previousBtn = document.querySelector("#previous-btn");
 const steps = document.querySelectorAll(".steps");
-const stepCounts = document.querySelectorAll(".step-count");
 let currentIndex = 1;
 
 nextBtn.addEventListener("click", () => {
@@ -11,6 +10,7 @@ nextBtn.addEventListener("click", () => {
     currentIndex = steps.length;
   }
   updateSteps();
+  showStepCount();
 });
 previousBtn.addEventListener("click", () => {
   currentIndex--;
@@ -18,17 +18,20 @@ previousBtn.addEventListener("click", () => {
     currentIndex = 1;
   }
   updateSteps();
+  showStepCount();
 });
 
 const updateSteps = () => {
   steps.forEach((step, index) => {
     if (index < currentIndex) {
       step.classList.add("completed-steps");
+      step.nextElementSibling.classList.add("checked");
       setTimeout(() => {
         step.innerHTML = `<i class="ri-check-line"></i>`;
       }, 380);
     } else {
       step.classList.remove("completed-steps");
+      step.nextElementSibling.classList.remove("checked");
       step.innerHTML = `<i class="ri-close-fill"></i>`;
     }
   });

@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#main {
+  width: 100%;
+  height: 100%;
+  background: url("assets/netflix-background.jpg") no-repeat;
+  background-position: 0% 0%;
+}
+#black-background {
+  width: 100%;
+  height: 100vh;
+  background: #00000085;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+header {
+  width: 100%;
+  height: 14vh;
+  display: flex;
+  align-items: center;
+  padding-left: 3vw;
+  img {
+    width: 11vw;
+  }
+}
+#container {
+  width: 28vw;
+  height: 80vh;
+  background: #000000b3;
+  padding: 2.5vw;
+}
+h1 {
+  font-size: 1.8vw;
+  margin-bottom: 2vh;
+}
+form {
+  display: flex;
+  gap: 1.5vh;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.input-containers {
+  position: relative;
+}
+input {
+  width: 100%;
+  height: 6vh;
+  padding-left: 1vw;
+  font-size: 1vw;
+  background: #333333;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+input:focus {
+  background: #454545;
+}
+.input-labels {
+  position: absolute;
+  top: 19%;
+  left: 4%;
+  color: #a0a0a0;
+  transition: all 0.4s;
+}
+.label-to-top {
+  top: -4%;
+  left: 5%;
+  font-size: 0.8vw;
+}
+#signup-btn {
+  width: 100%;
+  height: 6vh;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1vw;
+  letter-spacing: 0.5px;
+  background: #e50914;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.5vh;
+  transition: transform 0.2s;
+}
+#signup-btn:hover {
+  background: #ca010b;
+}
+#signup-btn:active {
+  transform: scale(0.9);
+}
+#form-last {
+  width: 100%;
+  height: 4vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -1.2vh;
+}
+#check-container {
+  display: flex;
+  align-items: center;
+}
+#checkbox {
+  width: 0.9vw;
+  margin-right: 0.5vw;
+  cursor: pointer;
+  accent-color: gray;
+}
+#checkbox-label {
+  font-size: 0.8vw;
+  color: #a5a5a5;
+  cursor: pointer;
+}
+#help-link {
+  font-size: 0.9vw;
+  text-decoration: none;
+  color: #a5a5a5;
+}
+#after-form-box {
+  width: 100%;
+  height: 20%;
+  color: #888888;
+  display: flex;
+  gap: 1vh;
+  flex-direction: column;
+  justify-content: center;
+}
+#after-form-box p:nth-child(1) {
+  font-size: 1.1vw;
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+#after-form-box p:nth-child(2) {
+  font-size: 0.8vw;
+  padding-right: 5vw;
+  a {
+    color: #0040ff;
+    text-decoration: none;
+  }
+}

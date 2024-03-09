@@ -1,35 +1,65 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [dateInput, setDateInput] = useState("");
+  const [result, setResult] = useState(false);
+  const [age, setAge] = useState("");
+  const handleCalculate = () => {
+    let dateSelected = {
+      date: dateInput.split("-")[2],
+      month: dateInput.split("-")[1],
+      year: dateInput.split("-")[0],
+    };
+    let date = new Date();
+    let currentDate = {
+      date: date.getDate(),
+      month: date.getMonth(),
+      year: date.getFullYear(),
+    };
+    if (dateInput !== "") {
+      setAge(calculateAge(dateSelected, currentDate));
+      setResult(true);
+      setTimeout(() => {
+        setResult(false);
+      }, 5000);
+    }
+  };
+  const calculateAge = (dateSelected, currentDate) => {
+    let ageYear = currentDate.year - dateSelected.year;
+    let ageMonth = currentDate.month - dateSelected.month;
+    let ageDate = currentDate.date - dateSelected.date;
+    if (ageMonth < 0) {
+      ageYear--;
+    }
+    return ageYear;
+  };
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div id="lg-container">
+        <div id="container" className={result ? "clip-path" : ""}>
+          <h1>Age Calculator</h1>
+          <h2>Enter your data of birth</h2>
+          <input
+            type="date"
+            name=""
+            id=""
+            value={dateInput}
+            onChange={(e) => {
+              const selectedDate = e.target.value;
+              setDateInput(selectedDate);
+            }}
+          />
+          <button id="calculate-btn" onClick={handleCalculate}>
+            <a>Calculate Age</a>
+          </button>
+        </div>
+        <div id="result-box" className={`${result ? "show-result" : ""} `}>
+          <span>{age}</span> years old
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

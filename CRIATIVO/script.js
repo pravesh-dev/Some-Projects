@@ -53,3 +53,85 @@ ScrollTrigger.create({
   onEnter: () => changeParallax1Image(3),
   onEnterBack: () => changeParallax1Image(2),
 });
+
+function heroSectionAnime() {
+  gsap.from(
+    "#hero-content-left h2, #hero-content-left h1, #hero-content-left > span",
+    {
+      y: 200,
+      opacity: 0,
+      duration: 1.5,
+    }
+  );
+  gsap.from("#hero-content-left p", {
+    y: 150,
+    opacity: 0,
+    delay: 0.6,
+    duration: 1,
+  });
+  gsap.from("#play-box", {
+    scale: 0,
+    duration: 1,
+    delay: 1,
+  });
+  gsap.from("#play-right", {
+    x: -100,
+    duration: 1,
+    delay: 1,
+    opacity: 0,
+  });
+}
+function servicesAnime() {
+  gsap.from("#service-left h4, #service-left h3, #service-left span", {
+    y: 120,
+    duration: 2.5,
+    scrollTrigger: {
+      trigger: "#our-services",
+      scroller: "#main",
+      start: "top 61%",
+      end: "top 60%",
+      scrub: 4,
+    },
+  });
+  gsap.from("#service-left p", {
+    y: 100,
+    duration: 1.5,
+    delay: 2,
+    scrollTrigger: {
+      trigger: "#our-services",
+      scroller: "#main",
+      start: "top 51%",
+      end: "top 50%",
+      scrub: 4,
+    },
+  });
+  gsap.from(".service-box-wrapper", {
+    scale: 0.8,
+    stagger: 1,
+    duration: 5,
+    scrollTrigger: {
+      trigger: "#our-services",
+      scroller: "#main",
+      start: "top 61%",
+      end: "top 60%",
+      scrub: 4,
+    },
+  });
+}
+function aboutAnime() {
+  gsap.from("#about-left", {
+    rotate: "-30deg",
+    scale: 0.6,
+    scrollTrigger: {
+      trigger: "#aboutUs",
+      scroller: "#main",
+      start: "top 61%",
+      end: "top 60%",
+      scrub: 4,
+    },
+  });
+}
+
+heroSectionAnime();
+servicesAnime();
+aboutAnime();

@@ -119,9 +119,9 @@ function servicesAnime() {
   });
 }
 function aboutAnime() {
-  gsap.from("#about-left", {
-    rotate: "-30deg",
-    scale: 0.6,
+  gsap.from("#about-right h4, #about-right > h3, #about-right span", {
+    y: 120,
+    duration: 2.5,
     scrollTrigger: {
       trigger: "#aboutUs",
       scroller: "#main",
@@ -130,7 +130,70 @@ function aboutAnime() {
       scrub: 4,
     },
   });
+  gsap.from("#about-right > p", {
+    y: 100,
+    duration: 1.5,
+    delay: 2,
+    scrollTrigger: {
+      trigger: "#aboutUs",
+      scroller: "#main",
+      start: "top 51%",
+      end: "top 50%",
+      scrub: 4,
+    },
+  });
+  gsap.from("#about-bottom", {
+    y: 100,
+    duration: 1.5,
+    delay: 2,
+    scrollTrigger: {
+      trigger: "#aboutUs",
+      scroller: "#main",
+      start: "top 51%",
+      end: "top 50%",
+      scrub: 4,
+    },
+  });
 }
+function changeParallaxCount(count, elementId) {
+  let countElement = document.querySelector(`#${elementId}`);
+  let currentCount = 0;
+  function updateCount() {
+    countElement.innerHTML = currentCount + "<span>+</span>";
+    currentCount++;
+
+    if (currentCount <= count) {
+      setTimeout(updateCount, 10);
+    }
+  }
+  updateCount();
+}
+let countElementsInfo = [
+  {
+    count: 150,
+    elemId: "project-count",
+  },
+  {
+    count: 75,
+    elemId: "costumer-count",
+  },
+  {
+    count: 20,
+    elemId: "award-count",
+  },
+  {
+    count: 45,
+    elemId: "member-count",
+  },
+];
+countElementsInfo.forEach((info) => {
+  ScrollTrigger.create({
+    trigger: "#parallax1",
+    start: "top 71%",
+    end: "bottom 70%",
+    onEnter: () => changeParallaxCount(info.count, info.elemId),
+  });
+});
 
 heroSectionAnime();
 servicesAnime();

@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#container {
+  width: 17vw;
+  height: 17vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vw;
+  justify-content: center;
+  align-items: center;
+}
+span {
+  width: 3vw;
+  height: 3vw;
+  font-size: 1.3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+span:nth-child(1) {
+  color: blue;
+  background: #0000ff2f;
+  box-shadow: 0 0 5px #0000ff2f;
+}
+span:nth-child(2) {
+  color: green;
+  background: #0080002e;
+  box-shadow: 0 0 5px #0080002e;
+}
+span:nth-child(3) {
+  color: yellow;
+  background: #ffff0029;
+  box-shadow: 0 0 5px #ffff0029;
+}
+span:nth-child(4) {
+  color: #01aeae;
+  background: #01aeae23;
+  box-shadow: 0 0 5px #01aeae23;
+}
+span:nth-child(5) {
+  color: #0062ff;
+  background: #0062ff27;
+  box-shadow: 0 0 5px #0062ff27;
+}
+span:nth-child(6) {
+  color: #ec0000;
+  background: #ff000036;
+  box-shadow: 0 0 5px #ff000036;
+}
+span:nth-child(7) {
+  color: #a5006c;
+  background: #a5006b2f;
+  box-shadow: 0 0 5px #a5006b2f;
+}
+span i {
+  transition: all 0.4s;
+}
+span:hover > i {
+  transform: translateY(-30%);
+}

@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+@font-face {
+  font-family: lemon;
+  src: url(fonts/Lemon/Lemon-Regular.ttf);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: #000;
+  overflow: hidden;
+}
+/* #box {
+  width: 30vw;
+  height: 30vw;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 2px solid white;
+  position: relative;
+} */
+#container{
+  width: 35vw;
+  height: 40vh;
+  background: linear-gradient(to top, #ffffff57, #9a5bff65);
+  position: relative;
+  border-radius: 12px;
+}
+#msgInput{
+  width: 100%;
+  height: 100%;
+  resize: none;
+  border: none;
+  outline: none;
+  background: rgba(255, 0, 0, 0);
+  padding: 1.2vw;
+  color: #fff;
+}
+#msgInput::placeholder{
+  color: #afafaf;
+}
+#letter-container {
+  width: 97%;
+  display: flex;
+  gap: 0.6vw;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right, #00000071, #2f1757bf);
+  padding: 0.8vh 0;
+  border-radius: 12px;
+  h3 {
+    font-size: 0.43vw;
+    color: #F8FFA7;
+    font-family: lemon;
+    font-weight: 300;
+  }
+}

@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: #282c34;
+}
+#img-box {
+  width: 6vw;
+  height: 6vw;
+  border: 4px solid transparent;
+  scale: 2;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* animation: anime 5s 1 linear; */
+  transition: all 1s;
+}
+#react-icon {
+    width: 5vw;
+    position: absolute;
+    transition: all 1s;
+}
+#btn-container{
+    position: absolute;
+    bottom: 25%;
+}
+#anime-btn{
+    width: 8vw;
+    height: 4vh;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 800;
+    background: #fff;
+    border: 2px solid #fff;
+    transition: all 0.7s;
+}
+#anime-btn:hover{
+    background: transparent;
+    color: #fff;
+}
+#anime-btn:active{
+    transform: scale(0.9);
+}
+#line1{
+    width: 0vw;
+    height: 0.6vh;
+    background: white;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 41%;
+    opacity: 0;
+    transition: all 1s;
+}
+#laptop-keyboard{
+    width: 0vw;
+    height: 10vh;
+    position: absolute;
+    bottom: 38%;
+    background: white;
+    clip-path: polygon(11% 51%, 91% 50%, 100% 100%, 0% 100%);
+    opacity: 0;
+    transition: all 1s;
+}

@@ -86,7 +86,28 @@ const updateDisplay = (days, hours, minutes, seconds) => {
 countdown();
 
 let tl = gsap.timeline();
+let loaderTime = gsap.timeline();
 
+gsap.from('#loader h3',{
+  opacity: 0,
+  x: 100,
+  stagger: 0.7,
+  duration: 2
+});
+
+setTimeout(() => {
+  gsap.to('#loader h3',{
+    opacity: 0,
+    x: -100,
+    stagger: 0.5,
+    duration: 2
+  });
+}, 1600);
+setTimeout(() => {
+  gsap.to('#loader', {
+    top: '-100%'
+  })
+}, 4000);
 tl.from('#second-section',{
   scale: 0.7,
   y: 500,

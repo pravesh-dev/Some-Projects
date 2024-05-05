@@ -6,17 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Softry</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 
 <body>
+    <div id="loader"></div>
     <!-- bigger circle on top -->
+    <div id="main">
     <div id="circle-1-overflow-control">
         <div id="circle-1-container">
             <div id="circle-1"></div>
         </div>
     </div>
-    <!-- Header -->
+        <!-- Header -->
     <header>
         <div id="logoContainer">
             <div id="logo">
@@ -309,7 +312,7 @@
                 <div class=" plan-grid-bg-color-1c242f">$29,99</div>
                 <div><a href="#">Try 7 days for free</a></div>
             </div>
-            <div class="active-plan-grid-box section-5-cards">
+            <div id="activeCard" class="active-plan-grid-box section-5-cards">
                 <div class="plan-grid-column-heading">Basic</div>
                 <div class=" plan-grid-bg-color-1c242f">Unlimited</div>
                 <div>7 Tasks</div>
@@ -330,10 +333,10 @@
         </div>
     </div>
     <div id="sixth-section">
-        <h3>client say</h3>
-        <h2>Our testimonials</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae facere nihil inventore doloremque nam laborum cum, accusantium modi animi id repudiandae error sed explicabo quibusdam reiciendis dicta nostrum dignissimos.</p>
-        <div>
+        <h3 class="sixth-section-anime">client say</h3>
+        <h2 class="sixth-section-anime">Our testimonials</h2>
+        <p class="sixth-section-anime">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae facere nihil inventore doloremque nam laborum cum, accusantium modi animi id repudiandae error sed explicabo quibusdam reiciendis dicta nostrum dignissimos.</p>
+        <div class="sixth-section-anime">
             <div>
                 <div class="sixth-section-img-main"></div>
                 <div>
@@ -347,15 +350,23 @@
                 <span></span>
             </div>
         </div>
-        <figure class="sixth-section-img-small" id="sixth-section-img-1"></figure>
-        <figure class="sixth-section-img-small" id="sixth-section-img-2"></figure>
-        <figure class="sixth-section-img-small" id="sixth-section-img-3"></figure>
-        <figure class="sixth-section-img-small" id="sixth-section-img-4"></figure>
-        <figure class="sixth-section-img-big" id="sixth-section-img-5"></figure>
-        <figure class="sixth-section-img-big" id="sixth-section-img-6"></figure>
-        <figure class="sixth-section-img-big" id="sixth-section-img-7"></figure>
-        <figure class="sixth-section-img-big" id="sixth-section-img-8"></figure>
+        <figure class="sixth-section-img-small sixth-section-imgs" id="sixth-section-img-1"></figure>
+        <figure class="sixth-section-img-small sixth-section-imgs" id="sixth-section-img-2"></figure>
+        <figure class="sixth-section-img-small sixth-section-imgs" id="sixth-section-img-3"></figure>
+        <figure class="sixth-section-img-small sixth-section-imgs" id="sixth-section-img-4"></figure>
+        <figure class="sixth-section-img-big sixth-section-imgs" id="sixth-section-img-5"></figure>
+        <figure class="sixth-section-img-big sixth-section-imgs" id="sixth-section-img-6"></figure>
+        <figure class="sixth-section-img-big sixth-section-imgs" id="sixth-section-img-7"></figure>
+        <figure class="sixth-section-img-big sixth-section-imgs" id="sixth-section-img-8"></figure>
     </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+        integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
+        integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
 </body>
 

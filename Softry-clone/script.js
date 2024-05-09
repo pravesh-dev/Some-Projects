@@ -108,19 +108,60 @@ setTimeout(() => {
     top: '-100%'
   })
 }, 4000);
+tl.to('#section1-left, #circle-1-container',{
+  x: -1200,
+  scrollTrigger: {
+    trigger: '#first-section',
+    scroller: '#main',
+    start: '10% 16%',
+    end: '110% 15%',
+    scrub: 4,
+  }
+});
+tl.to('#section1-right-part',{
+  x: 800,
+  scrollTrigger: {
+    trigger: '#first-section',
+    scroller: '#main',
+    start: '10% 16%',
+    end: '110% 15%',
+    scrub: 4,
+  }
+})
 tl.from('#second-section',{
-  scale: 0.7,
+  scale: 0.3,
   y: 500,
   scrollTrigger: {
     trigger: '#first-section',
     scroller: '#main',
-    start: '90% 50%',
+    start: '60% 50%',
     end: '90% 15%',
-    scrub: 6,
+    scrub: 2,
+  }
+})
+tl.from('.section2-cards',{
+  x: -800,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: '#first-section',
+    scroller: '#main',
+    start: '60% 50%',
+    end: '90% 15%',
+    scrub: 2,
+  }
+})
+tl.from('#second-section-img-box, .dotted-circle-around-img',{
+  x: 800,
+  scrollTrigger: {
+    trigger: '#first-section',
+    scroller: '#main',
+    start: '60% 50%',
+    end: '90% 15%',
+    scrub: 2,
   }
 })
 tl.from('#third-section',{
-  scale: 0.7,
+  scale: 0.2,
   y: 500,
   scrollTrigger: {
     trigger: '#second-section',

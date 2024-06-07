@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #e8e8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#container {
+  width: 15rem;
+  height: 15rem;
+  /* background: darkcyan; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-box span {
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: #e3edf7;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  transition: all ease-in 0.3s;
+  cursor: pointer;
+}
+.icon-box span:hover {
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+    transform: scale(0.95) translateY(5%);
+}
+#facebook{
+    color: blue;
+}
+#instagram{
+    color: #ff245b;
+    color: #f9ce34;
+}
+#gitHub{
+    color: #00ccff;
+}
+#netflix{
+    color: #fc0404;
+}
+#facebook:hover{
+    color:black;
+}
+#instagram:hover{
+    color: black;
+}
+#gitHub:hover{
+    color: black;
+}
+#netflix:hover{
+    color: black;
+}

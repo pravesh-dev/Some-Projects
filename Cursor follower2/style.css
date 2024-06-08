@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+#bg_video {
+  width: 100%;
+  height: 100vh;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: left;
+  filter: hue-rotate(60deg);
+}
+#bg_video2 {
+  width: 50%;
+  height: 100vh;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: left;
+  rotate: 180deg;
+  filter: hue-rotate(60deg);
+}
+#video_overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000000f0;
+  mix-blend-mode: overlay;
+}
+main {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  display: flex;
+  gap: 4.4rem;
+  a {
+    color: #e6ff03;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+}
+#enter {
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid #9fe3002c;
+  border-radius: 50%;
+  color: #a3b500;
+  font-size: 0.6rem;
+  letter-spacing: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+#enter:hover {
+  transform: scale(1.1);
+}
+#rotate_enter {
+  width: 70%;
+  height: 70%;
+  border: 1px solid #74a600e2;
+  border-top: transparent;
+  border-style: solid;
+  border-radius: 50%;
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+p {
+  padding: 10vh 0 2vh 0;
+  color: #b5c90076;
+  font-size: 0.65rem;
+  width: 20%;
+  text-align: center;
+  a {
+    text-decoration: underline;
+    color: unset;
+    font-weight: 900;
+  }
+}
+#cursor_follow {
+  width: 3rem;
+  height: 3rem;
+  position: fixed;
+  animation: circle_anime 2.5s ease-in-out infinite alternate,
+    circle_anime_rotate 3s linear infinite;
+}
+.circles {
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background: #a3b500;
+  position: absolute;
+}
+#circle1 {
+  width: 0.9rem;
+  height: 0.9rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#circle2 {
+  left: 0;
+  top: 0;
+}
+#circle3 {
+  left: calc(100% - 0.3rem);
+  top: 0;
+}
+#circle4 {
+  left: 0;
+  top: calc(100% - 0.3rem);
+}
+#circle5 {
+  left: calc(100% - 0.3rem);
+  top: calc(100% - 0.3rem);
+}
+@keyframes circle_anime {
+  from {
+    width: 3rem;
+    height: 3rem;
+  }
+  to {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+@keyframes circle_anime_rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

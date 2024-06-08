@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay loop muted id="bg_video">
+        <source src="1118467_4k_Magic_Cosmos_1920x1080.mp4">
+    </video>
+    <!-- <video autoplay loop muted id="bg_video2">
+        <source src="1118474_Macro_4k_Pulse_1920x1080.mp4">
+    </video> -->
+    <div id="video_overlay"></div>
+    <main>
+        <header>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+            </nav>
+        </header>
+        <div id="enter">
+            <div id="rotate_enter"></div>
+            Enter
+        </div>
+        <p>BY ENTERING THE SITE, YOU AGREE TO OUR USE OF <a href="#">COOKIES</a>. FOR MORE INFO CHECK OUR <a href="#">PRIVACY POLICY</a>.</p>
+        <div id="cursor_follow">
+            <div class="circles" id="circle1"></div>
+            <div class="circles" id="circle2"></div>
+            <div class="circles" id="circle3"></div>
+            <div class="circles" id="circle4"></div>
+            <div class="circles" id="circle5"></div>
+        </div>
+        
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>
